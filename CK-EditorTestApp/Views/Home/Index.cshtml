@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@* <script src="~/ckeditor5-build-classic/ckeditor.js"></script> *@
+
+<link href="~/ckeditor5-custom-classic/sample/styles.css" rel="stylesheet" />
+
 <script src="~/ckeditor5-custom-classic/build/ckeditor.js"></script>
 
 <div class="text-center">
@@ -14,7 +16,9 @@
     </div>
 </div>
 
-<script>
+
+<script src="~/ckeditor5-custom-classic/sample/script.js"></script>
+@* <script>
 
     class MyUploadAdapter {
         constructor(loader) {
@@ -140,4 +144,4 @@
             console.log(error);
         });
 
-</script>
+</script> *@
