@@ -46,7 +46,7 @@ import { WordCount } from '@ckeditor/ckeditor5-word-count';
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
 
 class Editor extends ClassicEditor {
-	public static override builtinPlugins = [
+	public static builtinPlugins = [
 		Alignment,
 		Autoformat,
 		BlockQuote,
@@ -85,7 +85,7 @@ class Editor extends ClassicEditor {
 		WordCount
 	];
 
-	public static override defaultConfig: EditorConfig = {
+	public static defaultConfig: EditorConfig = {
 		toolbar: {
 			items: [
 				'sourceEditing',

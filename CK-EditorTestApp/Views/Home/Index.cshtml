@@ -1,7 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<script src="~/ckeditor5-build-classic/ckeditor.js"></script>
+@* <script src="~/ckeditor5-build-classic/ckeditor.js"></script> *@
+<script src="~/ckeditor5-custom-classic/build/ckeditor.js"></script>
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
@@ -120,9 +121,20 @@
     ClassicEditor
         .create(document.querySelector('#editor'), {
             extraPlugins: [MyCustomUploadAdapterPlugin],
-
-            // More configuration options.
-            // ...
+            style: {
+                definitions: [
+                    {
+                        name: 'Article category',
+                        element: 'h3',
+                        classes: ['category']
+                    },
+                    {
+                        name: 'Info box',
+                        element: 'p',
+                        classes: ['info-box']
+                    },
+                ]
+            }
         })
         .catch(error => {
             console.log(error);
